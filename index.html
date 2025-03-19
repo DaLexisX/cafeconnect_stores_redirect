@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe Connect - Redirecting...</title>
+    <title>CAFE:CONNECT - Redirecting...</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -28,6 +28,15 @@
         h1 {
             margin-top: 0;
             color: #5a3921;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        .brand {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .colon {
+            color: #c87137;
         }
         p {
             margin-bottom: 24px;
@@ -35,7 +44,7 @@
         }
         .loader {
             border: 5px solid #f3f3f3;
-            border-top: 5px solid #8b5a2b;
+            border-top: 5px solid #c87137;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -50,7 +59,7 @@
         }
         .store-button {
             padding: 12px 24px;
-            background-color: #8b5a2b;
+            background-color: #c87137;
             color: white;
             border: none;
             border-radius: 6px;
@@ -61,7 +70,7 @@
             transition: background-color 0.2s;
         }
         .store-button:hover {
-            background-color: #6b4621;
+            background-color: #a55a26;
         }
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -77,7 +86,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Cafe Connect</h1>
+        <h1 class="brand">CAFE<span class="colon">:</span>CONNECT</h1>
         <p>Redirecting you to the app store...</p>
         <div class="loader"></div>
         <p id="redirect-message">Please wait while we direct you to the appropriate store for your device.</p>
@@ -118,7 +127,7 @@
                     // For desktop or unsupported devices, show both options
                     redirectMessage.textContent = 'We detected you\'re not on a mobile device. Please select which app store you want to visit:';
                     document.querySelector('.loader').style.display = 'none';
-                    document.querySelector('p:first-of-type').textContent = 'Download Cafe Connect';
+                    document.querySelector('p:first-of-type').textContent = 'Download CAFE:CONNECT';
                 }
             }
             

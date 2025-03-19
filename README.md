@@ -1,4 +1,4 @@
-# Cafe Connect App Store Redirect
+# CAFE:CONNECT App Store Redirect
 
 A simple redirect page that automatically directs users to the appropriate app store based on their device type.
 
@@ -12,7 +12,7 @@ A simple redirect page that automatically directs users to the appropriate app s
 
 ## How It Works
 
-This lightweight page uses JavaScript to detect the user's device type by checking the user agent string. It then automatically redirects the user to the appropriate app store where they can download the Cafe Connect app.
+This lightweight page uses JavaScript to detect the user's device type by checking the user agent string. It then automatically redirects the user to the appropriate app store where they can download the CAFE:CONNECT app.
 
 For users on desktop or unsupported devices, both store options are presented as buttons.
 
