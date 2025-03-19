@@ -31,12 +31,12 @@
         }
         .logo {
             font-size: 3rem;
-            color: #c87137;
+            color: #3F6AB3;
             margin-bottom: 10px;
         }
         h1 {
             margin-top: 0;
-            color: #5a3921;
+            color: #3F6AB3;
             font-weight: 800;
             letter-spacing: 1px;
         }
@@ -45,7 +45,7 @@
             margin-bottom: 10px;
         }
         .colon {
-            color: #c87137;
+            color: #DF66A6;
         }
         p {
             margin-bottom: 24px;
@@ -53,7 +53,7 @@
         }
         .loader {
             border: 5px solid #f3f3f3;
-            border-top: 5px solid #c87137;
+            border-top: 5px solid #3F6AB3;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -68,7 +68,7 @@
         }
         .store-button {
             padding: 12px 24px;
-            background-color: #c87137;
+            background-color: #3F6AB3;
             color: white;
             border: none;
             border-radius: 6px;
@@ -85,7 +85,7 @@
             margin-right: 8px;
         }
         .store-button:hover {
-            background-color: #a55a26;
+            background-color: #2a4578;
         }
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -118,8 +118,12 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Store URLs
-            const androidUrl = 'https://play.google.com/store/apps/details?id=com.independentcafeownersnetwork.iconrewards';
+            const androidUrl = 'market://details?id=com.independentcafeownersnetwork.iconrewards';
+            const androidFallbackUrl = 'https://play.google.com/store/apps/details?id=com.independentcafeownersnetwork.iconrewards';
             const iosUrl = 'https://apps.apple.com/ph/app/cafe-connect/id6742357756';
+            
+            // Update the Android link href
+            document.getElementById('android-link').href = androidUrl;
             
             // Check if the device is iOS
             function isIOS() {
@@ -140,7 +144,15 @@
                     window.location.href = iosUrl;
                 } else if (isAndroid()) {
                     redirectMessage.textContent = 'Redirecting to the Google Play Store...';
+                    
+                    // Try to open native Play Store app first
                     window.location.href = androidUrl;
+                    
+                    // Fallback to web URL if the market:// URL fails
+                    // This timeout gives a short window to attempt opening the native app
+                    setTimeout(function() {
+                        window.location.href = androidFallbackUrl;
+                    }, 500);
                 } else {
                     // For desktop or unsupported devices, show both options
                     redirectMessage.textContent = 'We detected you\'re not on a mobile device. Please select which app store you want to visit:';
