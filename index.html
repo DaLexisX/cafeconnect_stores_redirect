@@ -116,8 +116,9 @@
                     window.location.href = androidUrl;
                 } else {
                     // For desktop or unsupported devices, show both options
-                    redirectMessage.textContent = 'Please select your device type:';
+                    redirectMessage.textContent = 'We detected you\'re not on a mobile device. Please select which app store you want to visit:';
                     document.querySelector('.loader').style.display = 'none';
+                    document.querySelector('p:first-of-type').textContent = 'Download Cafe Connect';
                 }
             }
             
