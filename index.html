@@ -43,9 +43,9 @@
 
         .logo {
             width: auto;
-            max-width: 150px; /* Reduced size to accommodate larger file */
+            max-width: 280px; /* Increased size since logo is now the main branding element */
             height: auto;
-            margin: 0 auto 30px;
+            margin: 0 auto 40px; /* Increased bottom margin */
             display: block;
         }
 
@@ -54,6 +54,7 @@
             font-size: 2.2rem;
             font-weight: 700;
             margin-bottom: 24px;
+            display: none; /* Hide the heading but keep it in the DOM in case we need to restore it */
         }
 
         p {
@@ -126,6 +127,7 @@
 <body>
     <div class="container">
         <img src="img/cafe_connect_logo_black_on_white.jpg" alt="CAFE:CONNECT Logo" class="logo">
+        <!-- Heading hidden via CSS -->
         <h1>CAFE:CONNECT</h1>
         <p>Redirecting you to the app store...</p>
         <div class="loader"></div>
