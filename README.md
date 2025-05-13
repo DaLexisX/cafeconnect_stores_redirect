@@ -33,3 +33,5 @@ To make changes to this project:
 
 - [Google Play Store](https://play.google.com/store/apps/details?id=com.independentcafeownersnetwork.iconrewards)
 - [Apple App Store](https://apps.apple.com/ph/app/cafe-connect/id6742357756) 
+
+<!-- Trigger redeploy --> 
